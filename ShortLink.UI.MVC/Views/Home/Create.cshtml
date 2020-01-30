@@ -1,0 +1,25 @@
+﻿@model AddLinkViewModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<form asp-action="Create" method="post" role="form">
+    <div class="row">
+        <div class="form-group col-md-6 col-sm-12">
+            <label asp-for="Text">نام و نام خانوادگی</label>
+            <input type="text" asp-for="Text" placeholder="www.google.com" class="form-control">
+            <div class="help-block with-errors"></div>
+            <span asp-validation-for="Text" class="text-danger small"></span>
+        </div>
+    </div>
+    <div class="col-12 text-left">
+        <div class="form-group mb-none">
+            <button type="submit" class="btn btn-success">ارسال درخواست</button>
+        </div>
+    </div>
+</form>
+@if (TempData["ShortLink"] != null)
+{
+    <span>Your shortLink :</span><span>www.goog.gl/@TempData["ShortLink"].ToString()</span>
+}

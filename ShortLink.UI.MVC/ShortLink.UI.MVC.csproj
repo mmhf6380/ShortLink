@@ -17,10 +17,7 @@
     <ProjectReference Include="..\ShortLink.Core.Contracts\ShortLink.Core.Contracts.csproj" />
     <ProjectReference Include="..\ShortLink.Core.Entities\ShortLink.Core.Entities.csproj" />
     <ProjectReference Include="..\ShortLink.DAL.EF\ShortLink.DAL.EF.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Models\" />
+    <ProjectReference Include="..\ShortLink.Services.ApplicationService\ShortLink.Services.ApplicationService.csproj" />
   </ItemGroup>
 
 </Project>

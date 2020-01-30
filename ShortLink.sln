@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShortLink.UI.MVC", "ShortLi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShortLink.DAL.EF", "ShortLink.DAL.EF\ShortLink.DAL.EF.csproj", "{756B6554-B51F-40B3-A76B-C72BB8ADD680}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShortLink.Services.ApplicationService", "ShortLink.Services.ApplicationService\ShortLink.Services.ApplicationService.csproj", "{4459DC0E-710E-4C5F-8C39-DAFF405DF1FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{756B6554-B51F-40B3-A76B-C72BB8ADD680}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{756B6554-B51F-40B3-A76B-C72BB8ADD680}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{756B6554-B51F-40B3-A76B-C72BB8ADD680}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4459DC0E-710E-4C5F-8C39-DAFF405DF1FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4459DC0E-710E-4C5F-8C39-DAFF405DF1FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4459DC0E-710E-4C5F-8C39-DAFF405DF1FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4459DC0E-710E-4C5F-8C39-DAFF405DF1FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +56,7 @@ Global
 		{FF493F4B-6245-41E2-B0D5-8465C23F72FD} = {407FA64F-4F3C-4EDC-A1F2-3DF8A2E74344}
 		{2DAC90D9-BC8C-44FA-A0E1-16B6469B795F} = {601A6A13-9CE5-44FB-BAF8-0CA92176EFA6}
 		{756B6554-B51F-40B3-A76B-C72BB8ADD680} = {9A31B46A-A36B-4BD5-9CEE-271240E0B53A}
+		{4459DC0E-710E-4C5F-8C39-DAFF405DF1FC} = {33A51A37-C32F-4971-B9EC-FCAED72C4D7C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E388C4F0-CA3C-404D-A1A3-E568B82A3446}
