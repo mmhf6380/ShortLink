@@ -22,7 +22,7 @@ namespace ShortLink.UI.MVC
             services.AddMvc();
             services.AddDbContext<LinkDbContext>();
 
-            services.AddScoped<ILinkRepository, EFLinkRepository>(); 
+            services.AddScoped<ILinkRepository, EFLinkRepository>();
             services.AddScoped<ILinkService, LinkService>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
@@ -37,9 +37,16 @@ namespace ShortLink.UI.MVC
 
             app.UseStatusCodePages();
             app.UseStaticFiles();
-            app.UseMvc(route =>
-              //routs.MapRoute("ShortText", "/{Shorttext}", defaults: new { controller = "Link", action = "index" });
-               route.MapRoute("default", "/{Controller=Home}/{Action=Index}/{Id?}"));
+            //app.UseMvc(route =>
+            //  //routs.MapRoute("ShortText", "/{Shorttext}", defaults: new { controller = "Link", action = "index" });
+            //   route.MapRoute("default", "/{Controller=Home}/{Action=Index}/{Id?}"));
+
+
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute("default", "/{action=index}/{controller=home}/{id?}");
+                routes.MapRoute("ShortLink", "q/{ShortLink?}", defaults: new { controller = "Link", action = "index" });
+            });
         }
     }
 }

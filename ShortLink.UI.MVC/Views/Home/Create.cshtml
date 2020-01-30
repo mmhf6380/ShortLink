@@ -3,23 +3,26 @@
     ViewData["Title"] = "Create";
 }
 
-
-<form asp-action="Create" method="post" role="form">
+<div class="container">
+    <div class="mt-5"></div>
+    <form asp-action="Create" method="post" role="form">
+        <div class="row">
+            <div class="form-group col-12">
+                <label asp-for="Text" class="text-warning"><b>Orginal Link</b></label>
+                <input type="text" asp-for="Text" placeholder="https://www.google.com/account/profile/user/126578965472" class="form-control text-left">
+                <span asp-validation-for="Text" class="text-danger small"></span>
+            </div>
+        </div>
+        <div class="col-12 text-right">
+            <div class="form-group mb-none">
+                <button type="submit" class="btn btn-success">Send Request</button>
+            </div>
+        </div>
+    </form>
     <div class="row">
-        <div class="form-group col-md-6 col-sm-12">
-            <label asp-for="Text">نام و نام خانوادگی</label>
-            <input type="text" asp-for="Text" placeholder="www.google.com" class="form-control">
-            <div class="help-block with-errors"></div>
-            <span asp-validation-for="Text" class="text-danger small"></span>
-        </div>
+        @if (TempData["ShortLink"] != null)
+        {
+            <span>آدرس کوتاه شده :</span><a href="https://localhost:44395/q/@TempData["ShortLink"].ToString()" target="_blank">https://localhost:44395/q/@TempData["ShortLink"].ToString()</a>
+        }
     </div>
-    <div class="col-12 text-left">
-        <div class="form-group mb-none">
-            <button type="submit" class="btn btn-success">ارسال درخواست</button>
-        </div>
-    </div>
-</form>
-@if (TempData["ShortLink"] != null)
-{
-    <span>Your shortLink :</span><a asp-controller="Link" asp-action="Index" asp-route-Id=@TempData["ShortLink"].ToString()>https://localhost:44395/@TempData["ShortLink"].ToString()</a>
-}
+</div>

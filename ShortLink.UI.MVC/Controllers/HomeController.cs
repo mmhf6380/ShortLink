@@ -34,6 +34,7 @@ namespace ShortLink.UI.MVC.Controllers
             string result = linkService.CreateShortLink(id, model.Text);
             TempData["ShortLink"] = result;
             return View();
+
         }
     }
 }

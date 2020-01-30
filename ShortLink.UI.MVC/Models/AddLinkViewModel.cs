@@ -8,7 +8,7 @@ namespace ShortLink.UI.MVC.Models
 {
     public class AddLinkViewModel
     {
-        [Required]
+        [Required(ErrorMessage ="حتما می بایست یک لینک کامل وارد شود")]
         [Display(Name ="لینک اصلی")]
         public string Text { get; set; }
     }

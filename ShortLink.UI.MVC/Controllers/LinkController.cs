@@ -17,12 +17,12 @@ namespace ShortLink.UI.MVC.Controllers
         {
             this.linkService = linkService;
         }
-        public IActionResult Index([FromRoute]string Id)
+        public IActionResult Index([FromRoute]string ShortLink)
         {
-            var resulte = linkService.GetLink(Id);
+            var resulte = linkService.GetLink(ShortLink);
             if (resulte !=null)
-            {
-                return Redirect(resulte.Text.ToString());//"www.google.com/23412435124512435"
+            { 
+                return Redirect(resulte.Text.ToString());
             }
             return BadRequest();
             

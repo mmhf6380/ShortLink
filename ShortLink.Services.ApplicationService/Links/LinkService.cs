@@ -21,10 +21,15 @@ namespace ShortLink.Services.ApplicationService.Links
         }
         public string CreateShortLink(int personId,string link)
         {
+            string randomCode = RandomCode();
+            while (linkRepo.Get(randomCode) !=null)
+            {
+                randomCode = RandomCode();
+            }
             Link newlink = new Link()
             {
                 Text = link,
-                ShortText = RandomCode(),
+                ShortText = randomCode,
                 PersonId = personId
             };
             linkRepo.Add(newlink);
