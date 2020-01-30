@@ -10,4 +10,9 @@
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ShortLink.Core.Contracts\ShortLink.Core.Contracts.csproj" />
+    <ProjectReference Include="..\ShortLink.Core.Entities\ShortLink.Core.Entities.csproj" />
+  </ItemGroup>
+
 </Project>
