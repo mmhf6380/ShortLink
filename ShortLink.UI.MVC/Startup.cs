@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using ShortLink.Core.Contracts;
+using ShortLink.Core.Contracts.Common;
 using ShortLink.Core.Contracts.Links;
 using ShortLink.DAL.EF.Common;
 using ShortLink.DAL.EF.Links;
@@ -21,8 +22,9 @@ namespace ShortLink.UI.MVC
             services.AddMvc();
             services.AddDbContext<LinkDbContext>();
 
-            services.AddScoped<ILinkRepository, EFLinkRepository>();
+            services.AddScoped<ILinkRepository, EFLinkRepository>(); 
             services.AddScoped<ILinkService, LinkService>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
 
         }
 
@@ -36,6 +38,7 @@ namespace ShortLink.UI.MVC
             app.UseStatusCodePages();
             app.UseStaticFiles();
             app.UseMvc(route =>
+              //routs.MapRoute("ShortText", "/{Shorttext}", defaults: new { controller = "Link", action = "index" });
                route.MapRoute("default", "/{Controller=Home}/{Action=Index}/{Id?}"));
         }
     }
