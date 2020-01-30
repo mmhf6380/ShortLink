@@ -7,7 +7,7 @@ namespace ShortLink.Core.Contracts
 {
     public interface ILinkRepository
     {
-        Link Get(string ShortText);
-        int Add(Link link);
+        Link Get(string Shorturl);
+        long Add(Link link);
     }
 }

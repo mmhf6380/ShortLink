@@ -8,12 +8,15 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.2.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.6" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.4" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\ShortLink.Core.Contracts\ShortLink.Core.Contracts.csproj" />
     <ProjectReference Include="..\ShortLink.Core.Entities\ShortLink.Core.Entities.csproj" />
+    <ProjectReference Include="..\ShortLink.DAL.EF\ShortLink.DAL.EF.csproj" />
   </ItemGroup>
 
   <ItemGroup>
